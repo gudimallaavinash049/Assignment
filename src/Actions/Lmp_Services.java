@@ -294,6 +294,9 @@ public class Lmp_Services extends RegEmployeData {
 				break;
 
 			}
+		} catch (IllegalStateException ill) {
+			// Handling IllegalStateException to avoid inappropriate time method invokation
+			System.out.println(ill);
 		} catch (InputMismatchException ime) {
 
 			// Handling InputMismatchException to avoid mismatch of opt variable data type
@@ -304,12 +307,6 @@ public class Lmp_Services extends RegEmployeData {
 			System.out.println(e);
 		}
 
-		finally {
-
-			System.out
-					.println("***************************************************************************************");
-
-		}
 
 	}
 
